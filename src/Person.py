@@ -7,7 +7,7 @@ class Person:
     age: int
     gender: str
     height: str
-    weight: int
+    weight: float
     #check the person_count attribute
     #Class attribute that will count each person that is created. Increment in constructor.
 
