@@ -8,8 +8,7 @@ class Person:
     gender: str
     height: str
     weight: float
-    #check the person_count attribute
-    #Class attribute that will count each person that is created. Increment in constructor.
+    person_count: int
 
     @property
     def fistName(self):
@@ -58,6 +57,9 @@ class Person:
     @Weight.setter
     def Weight(self, setWeight):
         self.weight = setWeight
+
+    def talk(self, printPerson):
+        print(printPerson)
 
 
 
