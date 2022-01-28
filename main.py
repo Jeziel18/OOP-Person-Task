@@ -16,7 +16,7 @@ class Main:
     estudiante = student.Student("Miguel", "Angel", 25, "Male", "5-10", 135.5, "UPRM", "Computer Engineer")
     
     
-    
+    x = person.Person("Miguel", "Angel", 25, "Male", "5-10", 135.5)
 
     
     print(persona)
@@ -25,6 +25,8 @@ class Main:
     print(doctorxyz)
     print(ingeniero)
     print(estudiante)
+    print(trabajador.talk())
+    
     
 
     
