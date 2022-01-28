@@ -16,16 +16,16 @@ class Main:
     estudiante = student.Student("Miguel", "Angel", 25, "Male", "5-10", 135.5, "UPRM", "Computer Engineer")
     
     
-    x = person.Person("Miguel", "Angel", 25, "Male", "5-10", 135.5)
+    
 
     
-    print(persona)
-    print(trabajador)
-    print(abogado)
-    print(doctorxyz)
-    print(ingeniero)
-    print(estudiante)
-    print(trabajador.talk())
+    persona.talk()
+    trabajador.talk()
+    abogado.talk()
+    doctorxyz.talk()
+    ingeniero.talk()
+    estudiante.talk()
+    print(person.Person.person_counter)
     
     
 

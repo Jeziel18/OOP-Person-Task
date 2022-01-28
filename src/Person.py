@@ -11,7 +11,7 @@ class Person:
     person_counter: int = field(init = False, repr = False, default=0)
 
     def __post_init__(self):
-        self.person_counter += 1
+        Person.person_counter += 1
 
     @property
     def fistName(self):
@@ -61,8 +61,9 @@ class Person:
     def Weight(self, setWeight):
         self.weight = setWeight
 
-    def talk(self, printPerson):
-        print(printPerson)
+    def talk(self):
+        print("Hello! I am",self.firstName,self.lastName,", I have",self.Age,"and I am a",
+        self.Gender,". My heigth is",self.Height,"and my weight is",self.Height,".")
 
 
 

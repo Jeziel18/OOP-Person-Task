@@ -24,3 +24,7 @@ class Student(person.Person):
 
     def calculate(self, kwargs):
         print(kwargs)
+
+    def talk(self):
+        print("Hello! I am",self.firstName,self.lastName,". I am a student at",self.Institution,
+        ", studying",self.Major,".")
