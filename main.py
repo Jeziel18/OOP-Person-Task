@@ -8,19 +8,24 @@ from src import student
 class Main:
 
    
-    person = person.Person("Miguel", "Angel", 25, "Male", "5-10", 135.5, 1)
-    worker = worker.Worker("Miguel", "Angel", 25, "Male", "5-10", 135.5, 5000.50, 35.5, 2)
-    lawyer = lawyer.Lawyer("Miguel", "Angel", 25, "Male", "5-10", 135.5, 5000.50, 35.5, "Colegio Law Firm", 3)
-    doctor = doctor.Doctor("Miguel", "Angel", 25, "Male", "5-10", 135.5, 5000.50, 35.5, "Neurologist", 4)
-    engineer = engineer.Engineer("Miguel", "Angel", 25, "Male", "5-10", 135.5, 5000.50, 35.5, "Computer", "UPRM", False, True, 5)
-    student = student.Student("Miguel", "Angel", 25, "Male", "5-10", 135.5, "UPRM", "Computer Engineer", 6)
+    persona = person.Person("Miguel", "Angel", 25, "Male", "5-10", 135.5) 
+    trabajador = worker.Worker("Miguel", "Angel", 25, "Male", "5-10", 135.5, 5000.50, 35.5)
+    abogado = lawyer.Lawyer("Miguel", "Angel", 25, "Male", "5-10", 135.5, 5000.50, 35.5, "Colegio Law Firm")
+    doctorxyz = doctor.Doctor("Miguel", "Angel", 25, "Male", "5-10", 135.5, 5000.50, 35.5, "Neurologist")
+    ingeniero = engineer.Engineer("Miguel", "Angel", 25, "Male", "5-10", 135.5, 5000.50, 35.5, "Computer", "UPRM", False, True)
+    estudiante = student.Student("Miguel", "Angel", 25, "Male", "5-10", 135.5, "UPRM", "Computer Engineer")
+    
+    
+    
 
-    print(person)
-    print(worker)
-    print(lawyer)
-    print(doctor)
-    print(engineer)
-    print(student)
+    
+    print(persona)
+    print(trabajador)
+    print(abogado)
+    print(doctorxyz)
+    print(ingeniero)
+    print(estudiante)
+    
 
     
     

@@ -1,6 +1,6 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
-@dataclass
+@dataclass(init=True)
 class Person:
     first_name: str
     last_name: str
@@ -8,7 +8,10 @@ class Person:
     gender: str
     height: str
     weight: float
-    person_count: int
+    person_counter: int = field(init = False, repr = False, default=0)
+
+    def __post_init__(self):
+        self.person_counter += 1
 
     @property
     def fistName(self):
