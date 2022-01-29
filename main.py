@@ -7,8 +7,6 @@ from src import student
 
 class Main:
 
-   
-    persona = person.Person("Luisa", "Martinez", 25, "Female", "5-6", 135.5) 
     trabajador = worker.Worker("Miguel", "Sanchez", 41, "Male", "6-0", 167.2, 14484, 35.5)
     abogado = lawyer.Lawyer("Angela", "Rodriguez", 28, "Female", "5-5", 115.8, 50000.50, 40, "Colegio Law Firm")
     doctorxyz = doctor.Doctor("Jose", "Alvarez", 53, "Male", "5-10", 157.6, 110500.30, 40.5, "Neurologist")
@@ -17,15 +15,13 @@ class Main:
     
     print("Total people created: {}\n".format(person.Person.person_counter))
     
-    persona.talk()
-    trabajador.talk()
-    abogado.talk()
-    doctorxyz.talk()
-    ingeniero.talk()
-    estudiante.talk()
+    person.Person.talk(trabajador)
+    person.Person.talk(abogado)
+    person.Person.talk(doctorxyz)
+    person.Person.talk(ingeniero)
+    person.Person.talk(estudiante)
 
-    grades = [98,52,81,65,77]
-    estudiante.calculate(grades)
+    estudiante.calculate(98,52,81,65,77)
     
     
     

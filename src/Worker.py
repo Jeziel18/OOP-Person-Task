@@ -7,24 +7,24 @@ class Worker(person.Person):
     weekly_hours: float
 
     @property
-    def salary(self):
+    def _salary(self):
         return self.Salary
     
-    @salary.setter
-    def salary(self, setSalary):
+    @_salary.setter
+    def _salary(self, setSalary):
         self.Salary = setSalary
 
     @property
-    def weeklyHours(self):
+    def _weeklyHours(self):
         return self.weekly_hours
     
-    @weeklyHours.setter
-    def weeklyHours(self, setWeeklyHours):
+    @_weeklyHours.setter
+    def _weeklyHours(self, setWeeklyHours):
         self.weekly_hours = setWeeklyHours
 
     def talk(self):
-        print("Hello! I am {} {}, I am a worker that works {} a week and I have a salary of {}.\n".format(self.firstName,
-        self.lastName,self.weeklyHours,self.salary))
+        print("Hello! I am {} {}, I am a worker that works {} a week and I have a salary of {}.\n".format(self._firstName,
+        self._lastName,self._weeklyHours,self._salary))
 
 
     

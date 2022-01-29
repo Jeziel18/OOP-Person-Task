@@ -7,25 +7,25 @@ class Student(person.Person):
     Major: str
 
     @property
-    def institution(self):
+    def _institution(self):
         return self.Institution
 
-    @institution.setter
-    def institution(self, setIntitution):
+    @_institution.setter
+    def _institution(self, setIntitution):
         self.Institution = setIntitution
 
     @property
-    def major(self):
+    def _major(self):
         return self.Major
 
-    @major.setter
-    def major(self, setMajor):
+    @_major.setter
+    def _major(self, setMajor):
         self.Major = setMajor    
 
-    def calculate(self, kwargs):
-        result = sum(kwargs) / len(kwargs)
+    def calculate(self, *args):
+        result = sum(args) / len(args)
         print("Grades Average: {}\n".format(result))
 
     def talk(self):
-        print("Hello! I am {} {}. I am a student at {}, studying {}.".format(self.firstName,self.lastName,
-        self.institution,self.major))
+        print("Hello! I am {} {}. I am a student at {}, studying {}.".format(self._firstName,self._lastName,
+        self._institution,self._major))

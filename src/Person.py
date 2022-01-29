@@ -1,7 +1,8 @@
 from dataclasses import dataclass, field
+from abc import ABC, abstractmethod
 
 @dataclass(init=True)
-class Person:
+class Person(ABC):
     first_name: str
     last_name: str
     Age: int
@@ -14,56 +15,56 @@ class Person:
         Person.person_counter += 1
 
     @property
-    def fistName(self):
+    def _fistName(self):
         return self.first_name
 
-    @fistName.setter
-    def firstName(self, firstName):
+    @_fistName.setter
+    def _firstName(self, firstName):
         self.first_name = firstName
 
     @property
-    def lastName(self):
+    def _lastName(self):
         return self.last_name
 
-    @lastName.setter
-    def lastName(self, lastName):
+    @_lastName.setter
+    def _lastName(self, lastName):
         self.last_name = lastName
 
     @property
-    def age(self):
+    def _age(self):
         return self.Age
 
-    @age.setter
-    def age(self, setAge):
-        self.age = setAge
+    @_age.setter
+    def _age(self, setAge):
+        self.Age = setAge
 
     @property
-    def gender(self):
+    def _gender(self):
         return self.Gender
 
-    @gender.setter
-    def gender(self, setGender):
-        self.gender = setGender
+    @_gender.setter
+    def _gender(self, setGender):
+        self.Gender = setGender
 
     @property
-    def height(self):
+    def _height(self):
         return self.Height
 
-    @height.setter
-    def height(self, setHeight):
-        self.height = setHeight
+    @_height.setter
+    def _height(self, setHeight):
+        self.Height = setHeight
 
     @property
-    def weight(self):
+    def _weight(self):
         return self.Weight
 
-    @weight.setter
-    def weight(self, setWeight):
-        self.weight = setWeight
-
+    @_weight.setter
+    def _weight(self, setWeight):
+        self.Weight = setWeight
+        
+    @abstractmethod
     def talk(self):
-        print("Hello! I am {} {}, I have {} and I am a {}. My heigth is {} and my weight is {}.\n".format(self.firstName,
-        self.lastName,self.age,self.gender,self.height,self.weight))
+        self.talk()
 
 
 
