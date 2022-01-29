@@ -14,7 +14,7 @@ class Lawyer(worker.Worker):
         self.law_firm = setLawFirm
 
     def talk(self):
-        print("Hello! I am",self.firstName,self.lastName,", I am a lawyer that works",
-        self.weeklyHours,"a week at",self.lawFirm,"and I have a salary of",self.Salary,".")
+        print("Hello! I am {} {}, I am a lawyer that works {} a week at {} and I have a salary of {}.\n".format(self.firstName,
+        self.lastName,self.weeklyHours,self.lawFirm,self.salary))
 
 

@@ -3,16 +3,16 @@ from src import worker
 
 @dataclass
 class Doctor(worker.Worker):
-    type: str
+    Type: str
 
     @property
-    def Type(self):
-        return self.type
+    def type(self):
+        return self.Type
     
-    @Type.setter
-    def Type(self, setType):
-        self.type = setType
+    @type.setter
+    def type(self, setType):
+        self.Type = setType
 
     def talk(self):
-        print("Hello! I am",self.firstName,self.lastName,", I am a",self.Type,"that works",  
-        self.weeklyHours,"a week and I have a salary of",self.Salary,".")
+        print("Hello! I am {} {}. I am a {} that works {} a week and I have a salary of {}.\n".format(self.firstName,self.lastName,
+        self.type,self.weeklyHours,self.salary))

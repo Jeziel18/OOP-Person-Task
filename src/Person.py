@@ -4,10 +4,10 @@ from dataclasses import dataclass, field
 class Person:
     first_name: str
     last_name: str
-    age: int
-    gender: str
-    height: str
-    weight: float
+    Age: int
+    Gender: str
+    Height: str
+    Weight: float
     person_counter: int = field(init = False, repr = False, default=0)
 
     def __post_init__(self):
@@ -30,40 +30,40 @@ class Person:
         self.last_name = lastName
 
     @property
-    def Age(self):
-        return self.age
+    def age(self):
+        return self.Age
 
-    @Age.setter
-    def Age(self, setAge):
+    @age.setter
+    def age(self, setAge):
         self.age = setAge
 
     @property
-    def Gender(self):
-        return self.gender
+    def gender(self):
+        return self.Gender
 
-    @Gender.setter
-    def Gender(self, setGender):
+    @gender.setter
+    def gender(self, setGender):
         self.gender = setGender
 
     @property
-    def Height(self):
-        return self.height
+    def height(self):
+        return self.Height
 
-    @Height.setter
-    def Height(self, setHeight):
+    @height.setter
+    def height(self, setHeight):
         self.height = setHeight
 
     @property
-    def Weight(self):
-        return self.weight
+    def weight(self):
+        return self.Weight
 
-    @Weight.setter
-    def Weight(self, setWeight):
+    @weight.setter
+    def weight(self, setWeight):
         self.weight = setWeight
 
     def talk(self):
-        print("Hello! I am",self.firstName,self.lastName,", I have",self.Age,"and I am a",
-        self.Gender,". My heigth is",self.Height,"and my weight is",self.Height,".")
+        print("Hello! I am {} {}, I have {} and I am a {}. My heigth is {} and my weight is {}.\n".format(self.firstName,
+        self.lastName,self.age,self.gender,self.height,self.weight))
 
 
 

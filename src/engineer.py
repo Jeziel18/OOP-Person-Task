@@ -3,29 +3,29 @@ from src import worker
 
 @dataclass
 class Engineer(worker.Worker):
-    type: str
-    company: str
+    Type: str
+    Company: str
     has_master: bool
     has_doctorate: bool
 
     @property
-    def Type(self):
-        return self.type
+    def type(self):
+        return self.Type
 
-    @Type.setter
-    def Type(self, setType):
-        self.type = setType
+    @type.setter
+    def type(self, setType):
+        self.Type = setType
 
     @property
-    def Company(self):
-        return self.company
+    def company(self):
+        return self.Company
 
-    @Company.setter
-    def Company(self, setCompany):
-        self.company = setCompany
+    @company.setter
+    def company(self, setCompany):
+        self.Company = setCompany
 
     def talk(self):
-        print("Hello! I am",self.firstName,self.lastName,", I am a",self.Type,"engineer that works",  
-        self.weeklyHours,"a week at",self.Company,"and I have a salary of ",self.Salary,".")
-        print("I have a master degree:", self.has_master)
-        print("I have a doctorate degree:", self.has_doctorate)
+        print("Hello! I am {} {}, I am a {} engineer that works {} a week at {} and I have a salary of {}.".format(self.firstName,
+        self.lastName,self.type,self.weeklyHours,self.company,self.Salary))
+        print("I have a master degree: {}".format(self.has_master))
+        print("I have a doctorate degree: {}\n".format(self.has_doctorate))

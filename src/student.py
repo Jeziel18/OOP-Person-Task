@@ -3,31 +3,29 @@ from src import person
 
 @dataclass
 class Student(person.Person):
-    institution: str
-    major: str
+    Institution: str
+    Major: str
 
     @property
-    def Institution(self):
-        return self.institution
+    def institution(self):
+        return self.Institution
 
-    @Institution.setter
-    def Institution(self, setIntitution):
-        self.institution = setIntitution
+    @institution.setter
+    def institution(self, setIntitution):
+        self.Institution = setIntitution
 
     @property
-    def Major(self):
-        return self.major
+    def major(self):
+        return self.Major
 
-    @Major.setter
-    def Major(self, setMajor):
-        self.major = setMajor    
+    @major.setter
+    def major(self, setMajor):
+        self.Major = setMajor    
 
     def calculate(self, kwargs):
-        sumList = sum(kwargs)
-        length = len(kwargs)
-        result = sumList / length
-        print(result)
+        result = sum(kwargs) / len(kwargs)
+        print("Grades Average: {}\n".format(result))
 
     def talk(self):
-        print("Hello! I am",self.firstName,self.lastName,". I am a student at",self.Institution,
-        ", studying",self.Major,".")
+        print("Hello! I am {} {}. I am a student at {}, studying {}.".format(self.firstName,self.lastName,
+        self.institution,self.major))

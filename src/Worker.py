@@ -3,16 +3,16 @@ from src import person
 
 @dataclass
 class Worker(person.Person):
-    salary: float
+    Salary: float
     weekly_hours: float
 
     @property
-    def Salary(self):
-        return self.salary
+    def salary(self):
+        return self.Salary
     
-    @Salary.setter
-    def Salary(self, setSalary):
-        self.salary = setSalary
+    @salary.setter
+    def salary(self, setSalary):
+        self.Salary = setSalary
 
     @property
     def weeklyHours(self):
@@ -23,8 +23,8 @@ class Worker(person.Person):
         self.weekly_hours = setWeeklyHours
 
     def talk(self):
-        print("Hello! I am",self.firstName,self.lastName,", I am a worker that works",  
-        self.weeklyHours,"a week and I have a salary of ",self.Salary,".")
+        print("Hello! I am {} {}, I am a worker that works {} a week and I have a salary of {}.\n".format(self.firstName,
+        self.lastName,self.weeklyHours,self.salary))
 
 
     
