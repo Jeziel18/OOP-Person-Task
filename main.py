@@ -15,7 +15,8 @@ class Main:
     ingeniero = engineer.Engineer("Miguel", "Angel", 25, "Male", "5-10", 135.5, 5000.50, 35.5, "Computer", "UPRM", False, True)
     estudiante = student.Student("Miguel", "Angel", 25, "Male", "5-10", 135.5, "UPRM", "Computer Engineer")
     
-    
+    grades = [98,52,81,65,77]
+    estudiante.calculate(grades)
     
 
     

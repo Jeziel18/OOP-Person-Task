@@ -23,7 +23,10 @@ class Student(person.Person):
         self.major = setMajor    
 
     def calculate(self, kwargs):
-        print(kwargs)
+        sumList = sum(kwargs)
+        length = len(kwargs)
+        result = sumList / length
+        print(result)
 
     def talk(self):
         print("Hello! I am",self.firstName,self.lastName,". I am a student at",self.Institution,
