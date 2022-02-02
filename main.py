@@ -22,6 +22,8 @@ class Main:
     person.Person.talk(estudiante)
 
     estudiante.calculate(98,52,81,65,77)
+
+    
     
     
     

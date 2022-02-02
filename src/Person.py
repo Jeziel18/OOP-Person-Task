@@ -3,64 +3,64 @@ from abc import ABC, abstractmethod
 
 @dataclass(init=True)
 class Person(ABC):
-    first_name: str
-    last_name: str
-    Age: int
-    Gender: str
-    Height: str
-    Weight: float
+    __first_name: str
+    __last_name: str
+    __age: int
+    __gender: str
+    __height: str
+    __weight: float
     person_counter: int = field(init = False, repr = False, default=0)
 
     def __post_init__(self):
         Person.person_counter += 1
 
     @property
-    def _fistName(self):
-        return self.first_name
+    def firstName(self):
+        return self.__first_name
 
-    @_fistName.setter
-    def _firstName(self, firstName):
-        self.first_name = firstName
-
-    @property
-    def _lastName(self):
-        return self.last_name
-
-    @_lastName.setter
-    def _lastName(self, lastName):
-        self.last_name = lastName
+    @firstName.setter
+    def firstName(self, firstName):
+        self.__first_name = firstName
 
     @property
-    def _age(self):
-        return self.Age
+    def lastName(self):
+        return self.__last_name
 
-    @_age.setter
-    def _age(self, setAge):
-        self.Age = setAge
-
-    @property
-    def _gender(self):
-        return self.Gender
-
-    @_gender.setter
-    def _gender(self, setGender):
-        self.Gender = setGender
+    @lastName.setter
+    def lastName(self, lastName):
+        self.__last_name = lastName
 
     @property
-    def _height(self):
-        return self.Height
+    def age(self):
+        return self.__age
 
-    @_height.setter
-    def _height(self, setHeight):
-        self.Height = setHeight
+    @age.setter
+    def age(self, setAge):
+        self.__age = setAge
 
     @property
-    def _weight(self):
-        return self.Weight
+    def gender(self):
+        return self.__gender
 
-    @_weight.setter
-    def _weight(self, setWeight):
-        self.Weight = setWeight
+    @gender.setter
+    def gender(self, setGender):
+        self.__gender = setGender
+
+    @property
+    def height(self):
+        return self.__height
+
+    @height.setter
+    def height(self, setHeight):
+        self.__height = setHeight
+
+    @property
+    def weight(self):
+        return self.__weight
+
+    @weight.setter
+    def weight(self, setWeight):
+        self.__weight = setWeight
         
     @abstractmethod
     def talk(self):
