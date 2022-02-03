@@ -64,7 +64,7 @@ class Person(ABC):
         
     @abstractmethod
     def talk(self):
-        self.talk()
+        pass
 
 
 

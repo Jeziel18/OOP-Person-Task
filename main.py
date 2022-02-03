@@ -15,13 +15,15 @@ class Main:
     
     print("Total people created: {}\n".format(person.Person.person_counter))
     
-    person.Person.talk(trabajador)
-    person.Person.talk(abogado)
-    person.Person.talk(doctorxyz)
-    person.Person.talk(ingeniero)
-    person.Person.talk(estudiante)
+    trabajador.talk()
+    abogado.talk()
+    doctorxyz.talk()
+    ingeniero.talk()
+    estudiante.talk()
 
     estudiante.calculate(98,52,81,65,77)
+
+
 
     
     
