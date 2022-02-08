@@ -1,18 +1,28 @@
-from dataclasses import dataclass, field
+"""
+In this class the Person is created. This is the base model
+for the other persons to be created.
+
+It used abtrasct classes for the method talk().
+"""
+
 from abc import ABC, abstractmethod
+from dataclasses import dataclass, field
+
 
 @dataclass(init=True)
 class Person(ABC):
-    __first_name: str
-    __last_name: str
-    __age: int
-    __gender: str
-    __height: str
-    __weight: float
-    person_counter: int = field(init = False, repr = False, default=0)
+    __first_name: str  #  first name
+    __last_name: str  # last name
+    __age: int  # age of the person
+    __gender: str  # gender of the person
+    __height: str  # height of the person
+    __weight: float  # weight of the person
+    person_counter: int = field(init = False, repr = False, default=0)  # Method to count persons created
 
-    def __post_init__(self):
+    def __post_init__(self):  # initialization of the person_counter
         Person.person_counter += 1
+
+    # All the Getter and Setters for each atribute of the person
 
     @property
     def firstName(self):
@@ -63,7 +73,7 @@ class Person(ABC):
         self.__weight = setWeight
         
     @abstractmethod
-    def talk(self):
+    def talk(self):  # Abstract method to print information about certain person
         pass
 
 
